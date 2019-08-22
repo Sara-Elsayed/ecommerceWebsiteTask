@@ -1,0 +1,8 @@
+<div class="card" *ngFor="let product of myProducts">
+<ol>
+    <img [src]="product.thumbImg" class="mr-2" style="width: 100px">
+</ol>
+<ol>{{ product.title }}</ol>
+<ol>{{product.detail}}</ol>
+<ol>{{product.quantity}}</ol>
+</div>
