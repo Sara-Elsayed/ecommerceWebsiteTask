@@ -10,13 +10,11 @@ import { Product } from '../model/product.model';
 export class ShoppingCartComponent implements OnInit {
 
   myProducts : Product[];
- @Input() allProducts : any ;
  
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
     this.myProducts = this.productService.getMyProducts();
-    // this.allProducts =this.productService.allProducts.emit(this.myProducts.slice());
   }
 
 }
