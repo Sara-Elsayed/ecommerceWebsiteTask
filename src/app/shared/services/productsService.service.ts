@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input, EventEmitter } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http'
 import { Product } from '../../model/product.model';
@@ -8,7 +8,6 @@ export class ProductService
 {
    private myProducts : Product[] = [
    ];
-
    constructor(private httpclient : HttpClient) {
       }
      getProducts(): Observable<any>{

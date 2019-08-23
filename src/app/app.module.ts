@@ -33,7 +33,8 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     BrowserAnimationsModule,
     MatDialogModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input } from '@angular/core';
 import { ProductService } from '../shared/services/productsService.service';
 import { Product } from '../model/product.model';
 
@@ -9,11 +9,14 @@ import { Product } from '../model/product.model';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  myProducts : Product[]
+  myProducts : Product[];
+ @Input() allProducts : any ;
+ 
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.productService.getMyProducts()
+    this.myProducts = this.productService.getMyProducts();
+    // this.allProducts =this.productService.allProducts.emit(this.myProducts.slice());
   }
 
 }
